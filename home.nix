@@ -8,24 +8,24 @@
 }: let
   unstable-packages = with pkgs.unstable; [
     # FIXME: select your core binaries that you always want on the bleeding-edge
-    bat
+    # bat
     bottom
     coreutils
     curl
-    du-dust
-    fd
-    findutils
-    fx
+    # du-dust
+    # fd
+    # findutils
+    # fx
     git
     git-crypt
     htop
     jq
-    killall
-    mosh
-    procs
-    ripgrep
-    sd
-    tmux
+    # killall
+    # mosh
+    # procs
+    # ripgrep
+    # sd
+    # tmux
     tree
     unzip
     vim
@@ -38,25 +38,25 @@
 
     # FIXME: you can add plugins, change keymaps etc using (jeezyvim.nixvimExtend {})
     # https://github.com/LGUG2Z/JeezyVim#extending
-    jeezyvim
+    # jeezyvim
 
     # key tools
     gh # for bootstrapping
-    just
+    # just
 
     # core languages
-    rustup
+    # rustup
 
     # rust stuff
-    cargo-cache
-    cargo-expand
+    # cargo-cache
+    # cargo-expand
 
     # local dev stuf
-    mkcert
-    httpie
+    # mkcert
+    # httpie
 
     # treesitter
-    tree-sitter
+    # tree-sitter
 
     # language servers
     nodePackages.vscode-langservers-extracted # html, css, json, eslint
@@ -68,7 +68,7 @@
     deadnix # nix
     nodePackages.prettier
     shellcheck
-    shfmt
+    # shfmt
     statix # nix
   ];
 in {
@@ -141,8 +141,8 @@ in {
         side-by-side = true;
         navigate = true;
       };
-      userEmail = ""; # FIXME: set your git email
-      userName = ""; #FIXME: set your git username
+      userEmail = "git@jzg.fastmail.com";
+      userName = "Zo";
       extraConfig = {
         # FIXME: uncomment the next lines if you want to be able to clone private https repos
         # url = {
