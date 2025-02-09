@@ -129,10 +129,12 @@ in {
     lsd.enable = true;
     lsd.enableAliases = true;
     lsd.settings = {
+      #https://github.com/lsd-rs/lsd#config-file-content
       date = "+%Y-%m-%d %H:%M:%S";
       icons = {
         when = "never";
       };
+      sorting.dir-grouping = "first";
     };
     zoxide.enable = true;
     zoxide.enableFishIntegration = true;
