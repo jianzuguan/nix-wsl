@@ -124,6 +124,12 @@ in {
     fzf.enableFishIntegration = true;
     lsd.enable = true;
     lsd.enableAliases = true;
+    lsd.settings = {
+      date = "+%Y-%m-%d %H:%M:%S";
+      icons = {
+        when = "never";
+      };
+    };
     zoxide.enable = true;
     zoxide.enableFishIntegration = true;
     zoxide.options = ["--cmd cd"];
@@ -229,7 +235,8 @@ in {
         pbcopy = "/mnt/c/Windows/System32/clip.exe";
         pbpaste = "/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -command 'Get-Clipboard'";
         explorer = "/mnt/c/Windows/explorer.exe";
-        
+        lsdf = "lsd -al";
+
         # To use code as the command, uncomment the line below. Be sure to replace [my-user] with your username. 
         # If your code binary is located elsewhere, adjust the path as needed.
         # code = "/mnt/c/Users/[my-user]/AppData/Local/Programs/'Microsoft VS Code'/bin/code";
