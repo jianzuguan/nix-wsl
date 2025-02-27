@@ -1,5 +1,4 @@
 {
-  # FIXME: uncomment the next line if you want to reference your GitHub/GitLab access tokens and other secrets
   # secrets,
   username,
   hostname,
@@ -7,12 +6,11 @@
   inputs,
   ...
 }: {
-  # FIXME: change to your tz! look it up with "timedatectl list-timezones"
+  # look tz up with "timedatectl list-timezones"
   time.timeZone = "Etc/UTC";
 
   networking.hostName = "${hostname}";
 
-  # FIXME: change your shell here if you don't want fish
   programs.fish.enable = true;
   environment.pathsToLink = ["/share/fish"];
   environment.shells = [pkgs.fish];
@@ -26,7 +24,6 @@
 
   users.users.${username} = {
     isNormalUser = true;
-    # FIXME: change your shell here if you don't want fish
     shell = pkgs.fish;
     extraGroups = [
       "wheel"

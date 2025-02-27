@@ -173,7 +173,6 @@ $character'';
       };
     };
 
-    # FIXME: This is my fish config - you can fiddle with it if you want
     fish = {
       enable = true;
       interactiveShellInit = ''
