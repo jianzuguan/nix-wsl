@@ -117,10 +117,9 @@ in {
       ruby.disabled = true;
       hostname.ssh_only = false;
       # hostname.style = "bold green";
-      format = ''
-        $cmd_duration
-        $directory$git_branch
-        $character'';
+      format = ''  $cmd_duration
+$directory$git_branch
+$character'';
     };
 
     # FIXME: disable whatever you don't want
