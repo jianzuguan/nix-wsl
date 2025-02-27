@@ -125,7 +125,6 @@ mv /tmp/configuration ~/nixos-wsl
 sudo nixos-rebuild switch --flake ~/nixos-wsl
 ```
 
-
 Note: If developing in Rust, you'll still be managing your toolchains and
 components like `rust-analyzer` with `rustup`!
 
@@ -146,17 +145,17 @@ this project uses a flat layout without any nesting or modularization.
   - `nixos-wsl` exposes important WSL-specific configuration options
   - `nix-index-database` tells you how to install a package when you run a
     command which requires a binary not in the `$PATH`
-- `wsl.nix` is where the VM is configured
+- `nix/wsl.nix` is where the VM is configured
   - The hostname is set here
   - The default shell is set here
   - User groups are set here
   - WSL configuration options are set here
   - NixOS options are set here
-- `home.nix` is where packages, dotfiles, terminal tools, environment variables
+- `nix/home.nix` is where packages, dotfiles, terminal tools, environment variables
   and aliases are configured
 
 ## TODO
 
 - Setup docker
 - Split `home.nix` into separate files for better organisation
-
+- Add vscode server bin to the path
