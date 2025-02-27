@@ -36,10 +36,6 @@
   stable-packages = with pkgs; [
     # FIXME: customize these stable packages to your liking for the languages that you use
 
-    # FIXME: you can add plugins, change keymaps etc using (jeezyvim.nixvimExtend {})
-    # https://github.com/LGUG2Z/JeezyVim#extending
-    # jeezyvim
-
     # key tools
     gh # for bootstrapping
     # just
@@ -180,8 +176,6 @@ $character'';
     # FIXME: This is my fish config - you can fiddle with it if you want
     fish = {
       enable = true;
-      # FIXME: run 'scoop install win32yank' on Windows, then add this line with your Windows username to the bottom of interactiveShellInit
-      # fish_add_path --append /mnt/c/Users/<Your Windows Username>/scoop/apps/win32yank/0.1.1
       interactiveShellInit = ''
         ${pkgs.any-nix-shell}/bin/any-nix-shell fish --info-right | source
 
@@ -235,8 +229,6 @@ $character'';
           gsl = "git stash list";
         };
       shellAliases = {
-        jvim = "nvim";
-        lvim = "nvim";
         pbcopy = "/mnt/c/Windows/System32/clip.exe";
         pbpaste = "/mnt/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe -command 'Get-Clipboard'";
         explorer = "/mnt/c/Windows/explorer.exe";

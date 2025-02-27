@@ -1,8 +1,7 @@
 # nixos-wsl-starter
 
 This repository is intended to be a sane, batteries-included starter template
-for running a [JeezyVim](https://github.com/LGUG2Z/JeezyVim)-powered NixOS
-development environment on WSL.
+for running a NixOS development environment on WSL.
 
 If you don't want to dig into NixOS too much right now, the only file you need
 to concern yourself with is [home.nix](home.nix). This is where you can add and
@@ -34,9 +33,7 @@ This starter is a lightly-opinionated take on a productive terminal-driven
 development environment based on my own preferences. However, it is trivial to
 customize to your liking both by removing and adding tools that you prefer.
 
-- The default editor is [JeezyVim](https://github.com/LGUG2Z/JeezyVim)
-- `win32yank` is used to ensure perfect bi-directional copying and pasting to
-  and from Windows GUI applications and LunarVim running in WSL
+- The default editor is vim
 - The default shell is `fish`
 - Native `docker` (ie. Linux, not Windows) is enabled by default
 - The prompt is [Starship](https://starship.rs/)
@@ -53,22 +50,6 @@ customize to your liking both by removing and adding tools that you prefer.
   enable private HTTPS clones with secret tokens
 - `fish` config is generated in [home.nix](home.nix) and includes git aliases,
   useful WSL aliases
-
-### win32yank
-
-There have been some recent changes in WSL2 that make running `win32yank`
-within WSL2 very slow. You should install this on Windows by running `scoop
-install win32yank` or compiling it from source, and then adding it to your `$PATH`:
-
-```nix
-{
-    programs.fish = {
-      interactiveShellInit = ''
-        fish_add_path --append /mnt/c/Users/<Your Windows Username>/scoop/apps/win32yank/0.1.1
-      '';
-    };
-}
-```
 
 ## Quickstart
 
@@ -97,7 +78,6 @@ cd /tmp/configuration
 
 - Change the username to your desired username in `flake.nix` with `nvim` (or
   whichever editor you prefer)
-- Install `win32yank` with `scoop` and add it to your `$PATH` in NixOS
 - Apply the configuration and shutdown the WSL2 VM
 
 ```bash
@@ -156,6 +136,7 @@ this project uses a flat layout without any nesting or modularization.
 
 ## TODO
 
+- Remove xxxvim
 - Setup docker
 - Split `home.nix` into separate files for better organisation
 - Add vscode server bin to the path
