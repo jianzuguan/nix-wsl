@@ -136,7 +136,5 @@ this project uses a flat layout without any nesting or modularization.
 
 ## TODO
 
-- Remove xxxvim
 - Setup docker
 - Split `home.nix` into separate files for better organisation
-- Add vscode server bin to the path

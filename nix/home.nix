@@ -235,7 +235,7 @@ $character'';
 
         # To use code as the command, uncomment the line below. Be sure to replace [my-user] with your username. 
         # If your code binary is located elsewhere, adjust the path as needed.
-        # code = "/mnt/c/Users/[my-user]/AppData/Local/Programs/'Microsoft VS Code'/bin/code";
+        code = "/mnt/c/Users/j/AppData/Local/Programs/'Microsoft VS Code'/bin/code";
       };
       plugins = [
         {
