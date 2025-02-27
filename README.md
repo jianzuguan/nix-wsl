@@ -114,16 +114,17 @@ wsl -d NixOS
 - Move the configuration to your new home directory
 
 ```bash
-mv /tmp/configuration ~/configuration
+mv /tmp/configuration ~/nixos-wsl
 ```
 
-- Go through all the `FIXME:` notices in `~/configuration` and make changes
+- Go through all the `FIXME:` notices in `~/nixos-wsl` and make changes
   wherever you want
 - Apply the configuration
 
-```bash
-sudo nixos-rebuild switch --flake ~/configuration
+```sh
+sudo nixos-rebuild switch --flake ~/nixos-wsl
 ```
+
 
 Note: If developing in Rust, you'll still be managing your toolchains and
 components like `rust-analyzer` with `rustup`!
@@ -153,3 +154,9 @@ this project uses a flat layout without any nesting or modularization.
   - NixOS options are set here
 - `home.nix` is where packages, dotfiles, terminal tools, environment variables
   and aliases are configured
+
+## TODO
+
+- Setup docker
+- Split `home.nix` into separate files for better organisation
+

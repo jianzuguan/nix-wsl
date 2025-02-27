@@ -85,7 +85,7 @@
         username = "nixos"; # FIXME: replace with your own username!
         modules = [
           nixos-wsl.nixosModules.wsl
-          ./wsl.nix
+          ./nix/wsl.nix
         ];
       };
     };
