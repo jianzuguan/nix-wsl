@@ -160,6 +160,9 @@ $character'';
         #     insteadOf = "https://gitlab.com";
         #   };
         # };
+        init = {
+          defaultBranch = "main";
+        };
         push = {
           default = "current";
           autoSetupRemote = true;
@@ -169,6 +172,16 @@ $character'';
         };
         diff = {
           colorMoved = "default";
+        };
+        alias = {
+          a = "add";
+          aa = "add .";
+          b = "branch --sort=-committerdate";
+          c = "checkout";
+          s = "status";
+          sts = "stash";
+          stsp = "stash pop";
+          l = "log --oneline -n 10";
         };
       };
     };
