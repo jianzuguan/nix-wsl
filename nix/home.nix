@@ -53,6 +53,7 @@
 
     # treesitter
     # tree-sitter
+    jdk
 
     # language servers
     nodePackages.vscode-langservers-extracted # html, css, json, eslint
@@ -66,6 +67,7 @@
     shellcheck
     # shfmt
     statix # nix
+    zoxide
   ];
 in {
   imports = [

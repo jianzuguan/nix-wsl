@@ -102,7 +102,7 @@ mv /tmp/configuration ~/nixos-wsl
 - Apply the configuration
 
 ```sh
-sudo nixos-rebuild switch --flake ~/nixos-wsl
+sudo nixos-rebuild switch --flake ~/nix-wsl
 ```
 
 Note: If developing in Rust, you'll still be managing your toolchains and
