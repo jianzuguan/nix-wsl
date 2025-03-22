@@ -54,6 +54,7 @@
     # treesitter
     # tree-sitter
     jdk
+    go
 
     # language servers
     nodePackages.vscode-langservers-extracted # html, css, json, eslint
