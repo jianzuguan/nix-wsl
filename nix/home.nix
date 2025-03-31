@@ -75,6 +75,7 @@ in {
     nix-index-database.hmModules.nix-index
     ./fish.nix
     ./git.nix
+    ./ssh.nix
     ./starship.nix
   ];
 
@@ -124,8 +125,6 @@ in {
     broot.enableFishIntegration = true;
     direnv.enable = true;
     direnv.nix-direnv.enable = true;
-
-    
 
     
   };
