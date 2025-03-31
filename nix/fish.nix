@@ -13,6 +13,14 @@
         + "/extras/kanagawa.fish")}
 
       set -U fish_greeting
+
+      # Read tokens from ~/.tokens and export them as environment variables
+      if test -f "$HOME/.config/tokens/tokens"
+        for line in (cat $HOME/.config/tokens/tokens | grep -v '^#' | grep '=')
+          set arr (echo $line | tr '=' '\n')
+          set -gx $arr[1] $arr[2]
+        end
+      end
     '';
     functions = {
       refresh = "source $HOME/.config/fish/config.fish";

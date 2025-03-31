@@ -105,6 +105,12 @@ mv /tmp/configuration ~/nixos-wsl
 sudo nixos-rebuild switch --flake ~/nix-wsl
 ```
 
+- Set up tokens
+```sh
+mkdir -p ~/.config/tokens && \
+cp tokens.example ~/.config/tokens/tokens
+```
+
 Note: If developing in Rust, you'll still be managing your toolchains and
 components like `rust-analyzer` with `rustup`!
 
@@ -136,5 +142,4 @@ this project uses a flat layout without any nesting or modularization.
 
 ## TODO
 
-- Setup docker
-- Split `home.nix` into separate files for better organisation
+- Tidy up readme and create a quick start for myself
