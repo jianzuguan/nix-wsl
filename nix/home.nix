@@ -6,9 +6,7 @@
   nix-index-database,
   ...
 }: let
-  unstable-packages = with pkgs.unstable; [
-    # FIXME: select your core binaries that you always want on the bleeding-edge
-    # bat
+  unstable-packages = with pkgs.unstable; [    # bat
     bottom
     coreutils
     curl
@@ -25,7 +23,6 @@
     # procs
     # ripgrep
     # sd
-    # tmux
     tree
     unzip
     vim
@@ -34,8 +31,6 @@
   ];
 
   stable-packages = with pkgs; [
-    # FIXME: customize these stable packages to your liking for the languages that you use
-
     # key tools
     gh # for bootstrapping
     # just
@@ -51,23 +46,15 @@
     # mkcert
     # httpie
 
-    # treesitter
-    # tree-sitter
+    fnm
+    corepack
     jdk
     go
 
-    # language servers
-    nodePackages.vscode-langservers-extracted # html, css, json, eslint
-    nodePackages.yaml-language-server
-    nil # nix
-
     # formatters and linters
-    alejandra # nix
-    deadnix # nix
-    nodePackages.prettier
-    shellcheck
-    # shfmt
-    statix # nix
+    alejandra # nix formatter
+    statix # Lints and suggestions for the Nix programming language
+
     zoxide
   ];
 in {

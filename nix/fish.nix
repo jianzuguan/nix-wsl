@@ -21,6 +21,8 @@
           set -gx $arr[1] $arr[2]
         end
       end
+
+      fnm env --use-on-cd --shell fish | source
     '';
     functions = {
       refresh = "source $HOME/.config/fish/config.fish";
