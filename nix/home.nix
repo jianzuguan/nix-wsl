@@ -77,15 +77,7 @@ in {
     sessionVariables.SHELL = "/etc/profiles/per-user/${username}/bin/fish";
   };
 
-  home.packages =
-    stable-packages
-    ++ unstable-packages
-    ++
-    # FIXME: you can add anything else that doesn't fit into the above two lists in here
-    [
-      # pkgs.some-package
-      # pkgs.unstable.some-other-package
-    ];
+  home.packages = stable-packages ++ unstable-packages;
 
   programs = {
     home-manager.enable = true;
