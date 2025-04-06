@@ -47,21 +47,11 @@
         "...." = "cd ../../../";
         "....." = "cd ../../../../";
       }
-      # git shortcuts
       // {
-        gapa = "git add --patch";
-        grpa = "git reset --patch";
-        gst = "git status";
-        gdh = "git diff HEAD";
-        gp = "git push";
-        gph = "git push -u origin HEAD";
-        gco = "git checkout";
-        gcob = "git checkout -b";
-        gcm = "git checkout master";
-        gcd = "git checkout develop";
-        gsp = "git stash push -m";
-        gsa = "git stash apply stash^{/";
-        gsl = "git stash list";
+        dc = "docker compose";
+        dcu = "docker compose up -d";
+        dcd = "docker compose down";
+        dcl = "docker compose logs";
       };
     shellAliases = {
       pbcopy = "/mnt/c/Windows/System32/clip.exe";
