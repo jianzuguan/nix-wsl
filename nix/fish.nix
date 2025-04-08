@@ -51,7 +51,8 @@
         dc = "docker compose";
         dcu = "docker compose up -d";
         dcd = "docker compose down";
-        dcl = "docker compose logs";
+        dcr = "docker compose restart";
+        dcl = "docker compose logs -f";
       };
     shellAliases = {
       pbcopy = "/mnt/c/Windows/System32/clip.exe";
