@@ -95,7 +95,7 @@ wsl -d NixOS
 mv /tmp/configuration ~/nix-wsl
 ```
 
-- Go through all the `FIXME:` notices in `~/nixos-wsl` and make changes
+- Go through all the `FIXME:` notices in `~/nix-wsl` and make changes
   wherever you want
 - Apply the configuration
 
