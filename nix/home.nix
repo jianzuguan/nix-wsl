@@ -6,7 +6,8 @@
   nix-index-database,
   ...
 }: let
-  unstable-packages = with pkgs.unstable; [    # bat
+  unstable-packages = with pkgs.unstable; [    
+    # bat
     bottom
     coreutils
     curl
@@ -45,6 +46,7 @@
     # local dev stuf
     # mkcert
     # httpie
+    docker
 
     fnm
     corepack

@@ -53,14 +53,12 @@ customize to your liking both by removing and adding tools that you prefer.
 
 ## Quickstart
 
-[![Watch the walkthrough video](https://img.youtube.com/vi/ZuVQds2hncs/hqdefault.jpg)](https://www.youtube.com/watch?v=ZuVQds2hncs)
-
 - Get the [latest
-  release](https://github.com/LGUG2Z/nixos-wsl-starter/releases)
+  release](https://github.com/nix-community/NixOS-WSL/releases/tag/2411.6.0)
 - Install it (tweak the command to your desired paths):
 
 ```powershell
-wsl --import NixOS .\NixOS\ .\nixos-wsl.tar.gz --version 2
+wsl --import NixOS .\NixOS\ .\nixos.wsl --version 2
 ```
 
 - Enter the distro:
@@ -69,16 +67,16 @@ wsl --import NixOS .\NixOS\ .\nixos-wsl.tar.gz --version 2
 wsl -d NixOS
 ```
 
+```sh
+nix-shell -p git
+```
+
 - Get a copy of this repo (you'll probably want to fork it eventually):
 
 ```bash
-git clone https://github.com/LGUG2Z/nixos-wsl-starter.git /tmp/configuration
+git clone https://github.com/jianzuguan/nix-wsl.git /tmp/configuration
 cd /tmp/configuration
 ```
-
-- Change the username to your desired username in `flake.nix` with `nvim` (or
-  whichever editor you prefer)
-- Apply the configuration and shutdown the WSL2 VM
 
 ```bash
 sudo nixos-rebuild switch --flake /tmp/configuration && sudo shutdown -h now
@@ -94,7 +92,7 @@ wsl -d NixOS
 - Move the configuration to your new home directory
 
 ```bash
-mv /tmp/configuration ~/nixos-wsl
+mv /tmp/configuration ~/nix-wsl
 ```
 
 - Go through all the `FIXME:` notices in `~/nixos-wsl` and make changes
@@ -108,7 +106,7 @@ sudo nixos-rebuild switch --flake ~/nix-wsl
 - Set up tokens
 ```sh
 mkdir -p ~/.config/tokens && \
-cp tokens.example ~/.config/tokens/tokens
+cp ~/nix-wsl/tokens.example ~/.config/tokens/tokens
 ```
 
 Note: If developing in Rust, you'll still be managing your toolchains and
