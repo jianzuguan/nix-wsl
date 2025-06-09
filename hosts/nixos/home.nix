@@ -60,10 +60,10 @@
 in {
   imports = [
     nix-index-database.hmModules.nix-index
-    ../../nix/fish.nix
-    ../../nix/git.nix
-    ../../nix/ssh.nix
-    ../../nix/starship.nix
+    ../../modules/fish.nix
+    ../../modules/git.nix
+    ../../modules/ssh.nix
+    ../../modules/starship.nix
   ];
 
   home.stateVersion = "22.11";
