@@ -82,7 +82,7 @@
         username = "nixos";
         modules = [
           nixos-wsl.nixosModules.wsl
-          ./hosts/nixos/configurations.nix
+          ./hosts/nixos/configuration.nix
         ];
       };
     };
