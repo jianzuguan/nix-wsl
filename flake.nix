@@ -85,5 +85,14 @@
           ./hosts/nixos/configuration.nix
         ];
       };
+
+      nixosConfigurations.server = mkNixosConfiguration {
+        hostname = "server";
+        username = "server";
+        modules = [
+          nixos-wsl.nixosModules.wsl
+          ./hosts/server/configuration.nix
+        ];
+      };
     };
 }

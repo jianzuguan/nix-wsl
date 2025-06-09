@@ -94,10 +94,10 @@ wsl -d NixOS
 - Move the configuration to your new home directory
 
 ```bash
-mv /tmp/configuration ~/nixos-wsl
+mv /tmp/configuration ~/nix-wsl
 ```
 
-- Go through all the `FIXME:` notices in `~/nixos-wsl` and make changes
+- Go through all the `FIXME:` notices in `~/nix-wsl` and make changes
   wherever you want
 - Apply the configuration
 
