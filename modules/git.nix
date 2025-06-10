@@ -20,24 +20,22 @@
       #     insteadOf = "https://gitlab.com";
       #   };
       # };
-      init = {
-        defaultBranch = "main";
-      };
+      init = { defaultBranch = "main"; };
       push = {
         default = "current";
         autoSetupRemote = true;
       };
-      merge = {
-        conflictstyle = "diff3";
-      };
-      diff = {
-        colorMoved = "default";
-      };
+      pull = { rebase = true; };
+      merge = { conflictstyle = "diff3"; };
+      diff = { colorMoved = "default"; };
       alias = {
         a = "add";
         aa = "add .";
         b = "branch --sort=-committerdate";
+        bn = "checkout -b";
         c = "checkout";
+        coi =
+          "!git checkout $(git branch --sort=-committerdate | grep -v HEAD | sed 's/^[* ] //' | fzf)";
         s = "status";
         sts = "stash";
         stsp = "stash pop";
