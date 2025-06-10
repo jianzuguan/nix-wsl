@@ -1,12 +1,9 @@
 {
-  # FIXME: uncomment the next line if you want to reference your GitHub/GitLab access tokens and other secrets
-  # secrets,
-  pkgs,
-  username,
-  nix-index-database,
-  ...
-}: let
-  unstable-packages = with pkgs.unstable; [    # bat
+# FIXME: uncomment the next line if you want to reference your GitHub/GitLab access tokens and other secrets
+# secrets,
+pkgs, username, nix-index-database, ... }:
+let
+  unstable-packages = with pkgs.unstable; [ # bat
     bottom
     coreutils
     curl
@@ -41,10 +38,10 @@
     # rust stuff
     # cargo-cache
     # cargo-expand
-
     # local dev stuf
     # mkcert
     # httpie
+    fzf
 
     fnm
     corepack
@@ -52,6 +49,7 @@
     go
 
     # formatters and linters
+    nixfmt
     alejandra # nix formatter
     statix # Lints and suggestions for the Nix programming language
 
@@ -93,9 +91,7 @@ in {
     lsd.settings = {
       #https://github.com/lsd-rs/lsd#config-file-content
       date = "+%Y-%m-%d %H:%M:%S";
-      icons = {
-        when = "never";
-      };
+      icons = { when = "never"; };
       sorting.dir-grouping = "first";
     };
     zoxide.enable = true;
@@ -105,6 +101,5 @@ in {
     direnv.enable = true;
     direnv.nix-direnv.enable = true;
 
-    
   };
 }
