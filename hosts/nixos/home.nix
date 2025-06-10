@@ -3,7 +3,9 @@
 # secrets,
 pkgs, username, nix-index-database, ... }:
 let
-  unstable-packages = with pkgs.unstable; [ # bat
+  unstable-packages = with pkgs.unstable; [ ];
+
+  stable-packages = with pkgs; [
     bottom
     coreutils
     curl
@@ -12,8 +14,6 @@ let
     # findutils
     # fx
     git
-    git-crypt
-    htop
     jq
     # killall
     # mosh
@@ -25,9 +25,7 @@ let
     vim
     wget
     zip
-  ];
 
-  stable-packages = with pkgs; [
     # key tools
     gh # for bootstrapping
     # just
@@ -42,6 +40,7 @@ let
     # mkcert
     # httpie
     fzf
+    lsd
 
     fnm
     corepack
@@ -64,18 +63,17 @@ in {
     ../../modules/starship.nix
   ];
 
-  home.stateVersion = "22.11";
-
   home = {
+    stateVersion = "22.11";
+
     username = "${username}";
     homeDirectory = "/home/${username}";
 
     sessionVariables.EDITOR = "nvim";
-    # FIXME: set your preferred $SHELL
     sessionVariables.SHELL = "/etc/profiles/per-user/${username}/bin/fish";
-  };
 
-  home.packages = stable-packages ++ unstable-packages;
+    packages = stable-packages ++ unstable-packages;
+  };
 
   programs = {
     home-manager.enable = true;
