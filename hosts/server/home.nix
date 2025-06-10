@@ -15,6 +15,7 @@ let
     jdk
     jq
     lsd
+    starship
     tree
     unzip
     vim
