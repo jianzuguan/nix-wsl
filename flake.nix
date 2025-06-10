@@ -18,27 +18,27 @@
   };
 
   outputs = inputs:
-    with inputs; let
-      lib = import ./lib.nix { flakeInputsFromFlakeNix = inputs; flakeSelfFromFlakeNix = self; };
+    with inputs;
+    let
+      lib = import ./lib.nix {
+        flakeInputsFromFlakeNix = inputs;
+        flakeSelfFromFlakeNix = self;
+      };
     in {
       formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.alejandra;
 
       nixosConfigurations.nixos = lib.mkNixosConfiguration {
         hostname = "nixos";
         username = "nixos";
-        modules = [
-          nixos-wsl.nixosModules.wsl
-          ./hosts/nixos/configuration.nix
-        ];
+        modules =
+          [ nixos-wsl.nixosModules.wsl ./hosts/nixos/configuration.nix ];
       };
 
       nixosConfigurations.server = lib.mkNixosConfiguration {
         hostname = "server";
         username = "server";
-        modules = [
-          nixos-wsl.nixosModules.wsl
-          ./hosts/server/configuration.nix
-        ];
+        modules =
+          [ nixos-wsl.nixosModules.wsl ./hosts/server/configuration.nix ];
       };
     };
 }
