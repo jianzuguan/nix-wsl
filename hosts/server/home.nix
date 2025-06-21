@@ -8,6 +8,7 @@ let
     corepack
     coreutils
     curl
+    ente-cli
     fnm
     fzf
     gh

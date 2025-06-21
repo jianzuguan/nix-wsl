@@ -100,7 +100,7 @@ mv /tmp/configuration ~/nix-wsl
 - Apply the configuration
 
 ```sh
-sudo nixos-rebuild switch --flake ~/nix-wsl
+sudo nixos-rebuild switch --flake ~/nix-wsl#server
 ```
 
 - Set up tokens
